@@ -1,0 +1,170 @@
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+    cursor: url('justin-cursor.png'), auto, ;
+
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    animation: headerPulse 2s infinite alternate;
+}
+
+@keyframes headerPulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    width: 80%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #ff4757;
+    margin-bottom: 15px;
+    font-size: 2em;
+    animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff4757;
+    }
+    25% {
+        color: #ffa502;
+    }
+    50% {
+        color: #1e90ff;
+    }
+    75% {
+        color: #2ed573;
+    }
+    100% {
+        color: #ff4757;
+    }
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff4757;
+    color: #fff;
+    font-size: 1.2em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    animation: footerFade 5s infinite alternate;
+}
+
+@keyframes footerFade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+/* Image Gallery Styles */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 15px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Spotify Playlist */
+/* Spotify Embed Styles */
+#spotify iframe {
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #48cae4, #00d4ff);
+    color: #fff;
+    font-size: 1rem;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
