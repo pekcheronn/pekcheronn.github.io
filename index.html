@@ -22,7 +22,7 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        overflow:visible;
+        overflow: visible;
         background-color: rgb(234, 248, 191);
       }
 
@@ -93,10 +93,10 @@
       }
 
       .video {
-    width: 30vw; /* 50% of the viewport width */
-    height: 30vw; /* Maintain square aspect ratio */
-    object-fit: cover; /* Crop the video to fit the container */
-}
+        width: 30vw; /* 50% of the viewport width */
+        height: 30vw; /* Maintain square aspect ratio */
+        object-fit: cover; /* Crop the video to fit the container */
+      }
 
       @media (max-width: 525px) {
         .section-box {
@@ -104,7 +104,7 @@
           flex-flow: column wrap;
         }
         .flex-box {
-            width: auto;
+          width: auto;
         }
       }
     </style>
@@ -117,36 +117,53 @@
       </div>
       <div class="flex-box">
         <h2 class="font-header pirata-one-regular">About Me</h2>
-        <video class="hover-video video" muted loop>
-            <source src="resources/profile.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <video
+          class="hover-video video"
+          muted
+          loop
+        >
+          <source
+            src="resources/profile.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
         <p class="font-content suse-title">
-          Hello! I am Dayner (left), nice to meet you! I am currently a Y2 Information
-          Systems at Singapore Management University. 
+          Hello! I am Dayner (left), nice to meet you! I am currently a Y2
+          Information Systems at Singapore Management University.
         </p>
       </div>
     </div>
     <div class="flex-box">
       <h1>Favourite Travel Destination</h1>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/KuKHih_QwhM?si=l_jxdr_xsWt78lZk"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
   </body>
 
   <script>
-    document.querySelectorAll('.flex-box').forEach(box => {
-        const video = box.querySelector('.hover-video');
+    document.querySelectorAll(".flex-box").forEach((box) => {
+      const video = box.querySelector(".hover-video");
 
-        box.addEventListener('mouseenter', () => {
-            if (video) {
-                video.play();
-            }
-        });
+      box.addEventListener("mouseenter", () => {
+        if (video) {
+          video.play();
+        }
+      });
 
-        box.addEventListener('mouseleave', () => {
-            if (video) {
-                video.pause();
-            }
-        });
+      box.addEventListener("mouseleave", () => {
+        if (video) {
+          video.pause();
+        }
+      });
     });
-</script>
+  </script>
 </html>
