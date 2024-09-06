@@ -6,151 +6,121 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>pekcheronn</title>
+    <title>Welcome</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Pirata+One&family=SUSE:wght@300&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-      /* <!--
-        Licorice: (28,17,10)
-        Light Green: (234,248,191)
-        Ruby: (155,41,21)
-        Dark Green: (67,100,54)
-        --> */
-
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: visible;
-        background-color: rgb(234, 248, 191);
+      .licorice {
+        color: rgb(28, 17, 10);
+      }
+      .light-green {
+        color: rgb(234, 248, 191);
+      }
+      .ruby {
+        color: rgb(155, 41, 21);
+      }
+      .dark-green {
+        color: rgb(67, 100, 54);
+      }
+      .noto-sans-name-header {
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        font-size: 12vmax;
+        vertical-align: text-top;
       }
 
-      .suse-title {
-        font-family: "SUSE", sans-serif;
+      .noto-sans-section-header {
+        font-family: "Noto Sans", sans-serif;
         font-optical-sizing: auto;
         font-weight: 300;
         font-style: normal;
+        font-variation-settings: "wdth" 100;
+        font-size: 2em;
       }
-
-      .pirata-one-regular {
-        font-family: "Pirata One", system-ui;
+      .noto-sans-p {
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+        font-variation-settings: "wdth" 100;
+        font-size: 1em;
       }
 
-      .font-title {
-        font-size: 10vw;
-        text-align: left;
-        color: rgb(155, 41, 21);
-        margin: 5%;
-        max-width: 90%;
+      body {
+        background-color:  rgb(67, 100, 54);
       }
-
-      .font-header {
-        font-size: 4vw;
-        color: rgb(67, 100, 54);
-      }
-
-      .font-content {
-        text-align: center;
-        font-size: 2vw;
-        color: rgb(28, 17, 10);
-      }
-
-      .section-box {
-        width: auto;
-        margin: 1%;
-        padding: 1%;
-        display: inline-flex;
-        align-items: center;
-        max-width: 100%;
-        max-height: 600px;
-      }
-
-      .flex-box {
-        display: flex;
-        margin: 2%;
-        padding: 5%;
-        border: black solid 1px;
-        align-items: center;
-        justify-content: center;
-        flex-flow: column;
-        border-radius: 30px;
-        max-width: 500px;
-        max-height: 600px;
-      }
-
-      .flex-box:hover {
-        background-color: aliceblue;
+      .div-hover:hover {
+        background-color:rgb(234, 248, 191) ;
         scale: 108%;
         transition-duration: 200ms;
-        cursor: cell;
+        cursor:grabbing;
       }
-      .flex-box:hover .hover-video {
-        animation-play-state: running; /* Attempt to play the video on hover */
-        opacity: 1; /* Optional: Change video appearance on hover */
-      }
-
-      .video {
-        width: 30vw; /* 50% of the viewport width */
-        height: 30vw; /* Maintain square aspect ratio */
-        object-fit: cover; /* Crop the video to fit the container */
-      }
-
-      @media (max-width: 525px) {
-        .section-box {
-          display: flex;
-          flex-flow: column wrap;
-        }
-        .flex-box {
-          width: auto;
-        }
+      /* .div-hover:hover .hover-video #profile-video {
+        animation-play-state: running;
+      } */
+      .div-hover:hover .inverse-text {
+        color: rgb(67, 100, 54);
       }
     </style>
   </head>
+  <body class=>
+    <div class="container-fluid">
 
-  <body>
-    <div class="section-box">
-      <div>
-        <h1 class="font-title suse-title">Pek Ser Onn Dayner :-)</h1>
+      <div class="row m-3 p-3 justify-content-evenly">
+        <div class="col-sm col-md-8 m-1">
+          <h1 class="noto-sans-name-header light-green">Pek Ser Onn Dayner</h1>
+        </div>
+
+        <div class="col-sm md-col-4 m-1 p-3 border border-1 border-danger-subtle rounded-4  div-hover">
+          <h2 class="noto-sans-section-header light-green inverse-text">About Me</h2>
+            <div class="ratio ratio-1x1 my-3">            
+              <video src="resources/profile.mp4" class="object-fit-cover hover-video" id="profile-video">
+            </video>
+          </div>
+          <p class="noto-sans-p mt-3 light-green inverse-text">
+            Hello! I am Dayner (left), nice to meet you! Hover
+            accusantium, alias consequatur praesentium. Dolor, ab repellat
+            consequatur sunt tempora impedit quia dolorem exercitationem qui!
+          </p>
+        </div>
       </div>
-      <div class="flex-box">
-        <h2 class="font-header pirata-one-regular">About Me</h2>
-        <video
-          class="hover-video video"
-          muted
-          loop
-        >
-          <source
-            src="resources/profile.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <p class="font-content suse-title">
-          Hello! I am Dayner (left), nice to meet you! I am currently a Y2
-          Information Systems at Singapore Management University.
-        </p>
+
+
+      <div class="row m-3">
+        <div class="col m-1 p-3 border border-1 border-info-subtle rounded-4 div-hover">
+          <h2 class="noto-sans-section-header light-green inverse-text">
+            Sapa, Vietnam.
+            </h2>
+        </div>
+      </div>
+
+      <div class="row m-3 p-3">
+        <div class="ratio ratio-16x9 p-1">
+          <iframe
+          src="https://www.youtube.com/embed/KuKHih_QwhM?si=l_jxdr_xsWt78lZk&autoplay=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen allow="autoplay"
+          ></iframe>
+        </div>
       </div>
     </div>
-    <div class="flex-box">
-      <h1>Favourite Travel Destination</h1>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/KuKHih_QwhM?si=l_jxdr_xsWt78lZk&autoplay=1"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen allow="autoplay"
-      ></iframe>
-    </div>
-  </body>
-
-  <script>
-    document.querySelectorAll(".flex-box").forEach((box) => {
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous">
+      document.querySelectorAll("#profile-video").forEach((box) => {
       const video = box.querySelector(".hover-video");
 
       box.addEventListener("mouseenter", () => {
@@ -166,4 +136,5 @@
       });
     });
   </script>
+  </body>
 </html>
